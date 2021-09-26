@@ -77,6 +77,8 @@ type Runtime interface {
 	// The entropy may be any byte array, or nil.
 	GetRandomnessFromBeacon(personalization crypto.DomainSeparationTag, randEpoch abi.ChainEpoch, entropy []byte) abi.Randomness
 
+	// Add one more method to get randomness signature from beacon as well
+
 	// GetRandomnessFromTickets samples randomness from the ticket chain. Randomess
 	// sampled through this method is unique per potential fork, and as a
 	// result, processes relying on this randomness are tied to whichever fork

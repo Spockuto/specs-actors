@@ -9,6 +9,7 @@ import (
 
 type State struct {
 	Entries []Entry
+	// TODO add a map of map[abi.ChainEpoch]TimeLockTxSet
 }
 
 type Entry struct {
@@ -31,5 +32,9 @@ func BuiltInEntries() []Entry {
 			Receiver:  builtin.StorageMarketActorAddr,
 			MethodNum: builtin.MethodsMarket.CronTick,
 		},
+		/*{
+			Receiver : builtin.TimeLockActorAddr,
+			MethodNum : builtin.MethodTimeLock.CronTick,
+		}*/
 	}
 }
